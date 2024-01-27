@@ -1,0 +1,6 @@
+<% content_for :form_title, "Edytuj ofertę" %>
+<% content_for :form_submit_text, "Zapisz zmiany" %>
+<%= render "form", post: @post %>
+<div class="mt-3">
+  <%= link_to "Powrót do listy ofert", posts_path, class: "btn btn-primary" %>
+</div>

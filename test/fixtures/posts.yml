@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  miejscowosc: MyString
+  budynek: MyString
+  adres: MyString
+  oferta: MyString
+  metry: 1.5
+  cena: 1.5
+  telefon: MyString
+  opis: MyText
+
+two:
+  title: MyString
+  miejscowosc: MyString
+  budynek: MyString
+  adres: MyString
+  oferta: MyString
+  metry: 1.5
+  cena: 1.5
+  telefon: MyString
+  opis: MyText

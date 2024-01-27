@@ -1,0 +1,33 @@
+<div id="<%= dom_id post %>" class="card mt-4">
+  <div class="card-body">
+    <h5 class="card-title"><%= post.title %></h5>
+    
+    <ul class="list-unstyled">    
+      <li><strong>Miejscowość:</strong> <%= post.miejscowosc %></li>
+      <li><strong>Budynek:</strong> <%= post.budynek %></li>
+      <li><strong>Adres:</strong> <%= post.adres %></li>
+      <li><strong>Oferta:</strong> <%= post.oferta %></li>
+      <li><strong>Metry:</strong> <%= post.metry %></li>
+      <li><strong>Cena:</strong> <%= post.cena %></li>
+      <li><strong>Telefon:</strong> <%= post.telefon %></li>
+      <p><strong>Opis:</strong> <%= post.opis %></p>
+     <% if post.images.attached? %>
+  <div class="text-center">
+    <h6>Zdjęcie:</h6>
+    <% post.images.each do |image| %>
+      <%= image_tag(image, class: "img-fluid mx-auto d-block") %>
+    <% end %>
+  </div>
+<% end %>
+
+    </ul>
+    
+    <div class="mt-3">
+      <%= link_to "Edytuj ofertę", edit_post_path(post), class: "btn btn-warning mr-2" %>
+      </div>
+      <div class="mt-3">
+      <%= button_to "Usuń ofertę", post, method: :delete, data: { confirm: "Czy na pewno chcesz usunąć ofertę?" }, class: "btn btn-danger" %>
+    </div>
+    <%= link_to "Możliwość oferty", post, class: "btn btn-primary btn-sm float-end" %>
+  </div>
+</div>

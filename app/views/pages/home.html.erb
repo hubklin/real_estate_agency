@@ -1,0 +1,20 @@
+<div class="container mt-4">
+  <div class="text-center">
+    <h1 class="display-4">Biuro nieruchomości Homly</h1>
+    <p class="lead">Znajdź wymarzoną ofertę lub dodaj własną</p>
+  </div>
+  <% if @posts.any? %>
+    <h2>Ostatnie oferty:</h2>
+    <div class="card">
+      <ul class="list-group list-group-flush">
+        <% @posts.each do |post| %>
+          <li class="list-group-item">
+            <%= render post %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% else %>
+    <p>Brak dostępnych ofert.</p>
+  <% end %>
+</div>
